@@ -6,14 +6,12 @@ export default function Header() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-black border-b border-neutral-900">
       <nav className="container h-16 flex items-center justify-between">
-        {/* Logo */}
         <Link href="/">
           <a className="flex items-center gap-2 hover:opacity-80 transition-opacity duration-200 ps-6">
             <span className="text-3xl font-black text-red-600">NETFLIX</span>
           </a>
         </Link>
 
-        {/* Navigation Links */}
         <div className="flex items-center gap-4">
           <Link href="/">
             <a>

@@ -10,38 +10,33 @@ interface BannerProps {
 export default function Banner({ filme }: BannerProps) {
   return (
     <div className="relative w-full h-screen bg-black overflow-hidden">
-      {/* Imagem de fundo */}
       <div className="absolute inset-0">
         <img
           src={filme.fundo}
           alt={filme.titulo}
           className="w-full h-full object-cover"
         />
-        {/* Gradiente escuro para legibilidade */}
+        
         <div className="absolute inset-0 bg-gradient-to-r from-black via-black/50 to-transparent" />
       </div>
 
-      {/* Conteúdo */}
       <div className="relative h-full flex flex-col justify-center items-start container">
         <div className="max-w-2xl">
-          {/* Título */}
+          
           <h1 className="text-6xl md:text-7xl font-black text-white mb-4 leading-tight tracking-tight">
             {filme.titulo}
           </h1>
 
-          {/* Metadados */}
           <div className="flex items-center gap-4 mb-6 text-neutral-200">
             <span className="text-lg font-semibold">★ {filme.avaliacao}</span>
             <span className="text-lg">{filme.ano}</span>
             <span className="text-lg">{filme.duracao} min</span>
           </div>
 
-          {/* Descrição */}
           <p className="text-lg text-neutral-300 mb-8 max-w-xl leading-relaxed">
             {filme.descricao}
           </p>
 
-          {/* CTAs */}
           <div className="flex gap-4">
             <Link href={`/filme/${filme.id}`}>
               <a>
